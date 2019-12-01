@@ -1,0 +1,14 @@
+<div class="layoutbox">
+    <form [formGroup]="pollForm" style="text-align: center;" (ngSubmit)="onSubmit()">
+        <h2>Create Poll</h2>
+        <p>
+            <input matInput placeholder="name" type="text" formControlName="name" />
+        </p>
+
+        <button mat-raised-button color="warn" type="submit">Create
+            
+        </button>
+
+    </form>
+
+</div>

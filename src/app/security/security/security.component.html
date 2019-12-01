@@ -1,0 +1,26 @@
+<div class="layoutbox">
+
+<form style="text-align: center;" #loginForm="ngForm" (ngSubmit)="onSubmit()">
+<h2>Login</h2>
+    
+    <p>
+
+        <input matInput placeholder="username"  [(ngModel)]="userLogin.username" type="text" name="username" />
+    </p>
+    <p>
+        <input matInput placeholder="password" type="password" name="password" 
+            [(ngModel)]="userLogin.password" />
+    </p>
+   
+    
+
+    <button mat-raised-button color="warn" type="submit" [disabled]="!loginForm.form.valid || submitted">Log
+            In</button>
+
+</form>
+<p>
+    Dont have an account? <a routerLink="/register" routerLinkActive="active"
+    [routerLinkActiveOptions]="{ exact: true }">Click here</a>
+</p>
+</div>
+<router-outlet></router-outlet>

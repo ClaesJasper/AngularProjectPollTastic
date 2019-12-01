@@ -1,0 +1,37 @@
+<div class="layoutbox" style="text-align: center;">
+
+    <h1>Dashboard</h1>
+    <h3> Welcome {{firstname}} {{lastname}}</h3>
+    <i class="large material-icons">email</i>
+    <P>{{email}}</P>
+
+
+    <div class="home">
+        <h2>Polls</h2>
+
+        <ul>
+            <li *ngFor="let p of (polls | async)">{{p.name}} </li>
+        </ul>
+
+        <p>
+            <a mat-raised-button color="warn" routerLink="/poll" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">Create Poll</a>
+        </p>
+
+    </div>
+
+    <div class="home">
+        <h2>Friends</h2>
+        <p>
+            <a mat-raised-button color="warn" routerLink="/poll" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }">Add Friend </a>
+        </p>
+
+    </div>
+
+    <p>
+        <a mat-raised-button color="warn" routerLink="/security" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">Log Out</a>
+    </p>
+
+</div>

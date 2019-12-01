@@ -1,0 +1,21 @@
+<div class="layoutbox">
+        <form [formGroup]="pollAnswerForm" style="text-align: center;" (ngSubmit)="onSubmit()">
+                <h2>Add Answers</h2>
+                <h3>Poll: {{ pollname }}</h3>
+                <p>
+                        <input matInput placeholder="answertext" type="text" formControlName="answertext" />
+                </p>
+                <p>
+                        <button mat-raised-button color="warn" type="submit">Add Answer
+
+                        </button>
+
+                </p>
+
+                <p>
+                        <a mat-raised-button color="warn" routerLink="/dashboard" routerLinkActive="active"
+                                [routerLinkActiveOptions]="{ exact: true }">Done</a>
+                </p>
+        </form>
+
+</div>

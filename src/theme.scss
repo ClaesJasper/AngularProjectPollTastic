@@ -1,0 +1,38 @@
+@import '~@angular/material/theming'; //imports we need to set our custom style
+@include mat-core(); //includes the common styles for Angular Material
+$helloworld-app-primary: mat-palette($mat-blue); //color palette for primary
+$helloworld-app-accent: mat-palette($mat-orange); //color palette for accent
+$helloworld-app-warn: mat-palette($mat-red); //color palette for warn
+$helloworld-app-theme: mat-light-theme($helloworld-app-primary, $helloworld-app-accent, $helloworld-app-warn); //creates the theme object
+
+@include angular-material-theme($helloworld-app-theme); //theme object is included in the Angular Material Theme and will now be used throughout the application 
+@import "~material-design-icons/iconfont/material-icons.css";
+
+
+//css voor meeste formulieren
+.layoutbox{
+    border: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    margin: 0 auto;
+
+    width: 284px;
+    padding: 10px 10px 20px 10px;
+    border: 5px solid orangered;
+    border-radius: 3%;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+    margin-top: 10%;
+
+}
+
+//extra css gebruikt voor in de fomrulieren
+.home{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+    width: 100%;
+    background-color: white;
+    
+    
+}
